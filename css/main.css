@@ -731,7 +731,6 @@ body {
   height: 2px;
   background-color: #999;
   display: inline-block;
-  padding: 0;
 }
 .navigation__icon::before, .navigation__icon::after {
   content: "";
@@ -750,6 +749,17 @@ body {
 }
 .navigation__button:hover .navigation__icon::after {
   top: 1rem;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
 }
 
 .section-about {
